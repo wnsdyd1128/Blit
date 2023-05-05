@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/intro"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/upper_frame"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="20dp"
+        android:background="@null">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/blit_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/blit_icon"
+            android:translationY="0sp"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/blit"
+            android:layout_width="38dp"
+            android:layout_height="27dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="34dp"
+            android:fontFamily="@font/jamsil_medium"
+            android:gravity="top"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/app_name"
+            android:textAppearance="@style/blit_pink"
+            android:translationY="0sp" />
+
+        <TextView
+            android:id="@+id/blit_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/jamsil_bold"
+            android:gravity="top"
+            android:autoSizeTextType="uniform"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/blit_title"
+            android:textAppearance="@style/blit_title"
+            android:translationY="-1.75sp" />
+
+        <TextView
+            android:id="@+id/blit_title_2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="125dp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/jamsil_bold"
+            android:gravity="top"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/blit_title_2"
+            android:textAppearance="@style/blit_title"
+            android:translationY="-1.75sp" />
+
+        <TextView
+            android:id="@+id/blit_desc"
+            android:layout_width="264dp"
+            android:layout_height="54dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="195dp"
+            android:fontFamily="@font/jamsil_medium"
+            android:autoSizeTextType="uniform"
+            android:gravity="top"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/blit_desc"
+            android:textAppearance="@style/blit_desc"
+            android:translationY="-1.95sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start_button"
+            android:layout_width="139dp"
+            android:layout_height="58dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="275dp"
+            android:background="@drawable/start_button"
+            android:clipToOutline="true"
+            android:fontFamily="@font/jamsil_medium"
+            android:text="@string/start_button_text"
+            android:textAppearance="@style/start_button_text"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:id="@+id/lower_frame"
+        android:layout_width="match_parent"
+        android:layout_height="490.15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="379dp"
+        android:background="@drawable/lower_frame">
+
+        <View
+            android:id="@+id/rectangle_3"
+            android:layout_width="170dp"
+            android:layout_height="450.31dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="170dp"
+            android:background="@drawable/rectangle_3"
+            android:rotation="70"
+            android:rotationY="0"
+            android:scaleX="2"
+            android:scaleY="10" />
+
+        <View
+            android:id="@+id/rectangle_4"
+            android:layout_width="match_parent"
+            android:layout_height="265dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="255dp"
+            android:background="@drawable/rectangle_4" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/play_logo"
+        android:layout_width="132dp"
+        android:layout_height="132dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="425dp"
+        android:background="@null"
+        android:src="@drawable/play_logo"
+        tools:ignore="SpeakableTextPresentCheck"
+
+        />
+
+</RelativeLayout>
+
+

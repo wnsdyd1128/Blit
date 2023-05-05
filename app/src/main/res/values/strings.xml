@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Blit</string>
+    <string name="todo">TODO</string>
+    <string name="blit_title">정산, 클릭 한 번으로</string>
+    <string name="blit_title_2">간편하게</string>
+    <string name="blit_desc">귀찮은 정산은 Blit에 맡기고,\u000A신나게 놀아볼까요?</string>
+    <string name="start_button_text">시작하기!</string>
+    <string name="calculate_button">정산하기!</string>>
+
+</resources>
