@@ -48,7 +48,8 @@ class MainScreen : AppCompatActivity() {
     }
 
     private fun test() {
-        binding.textTotalAmount.text = px2dp(getStatusBarHeight(this), this).toString()
+//        binding.textTotalAmount.text = px2dp(getStatusBarHeight(this), this).toString()
+        binding.textTotalAmount.text = "123,456" + " 원"
     }
 
     fun getStatusBarHeight(context: Context): Int {

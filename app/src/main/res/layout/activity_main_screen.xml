@@ -68,7 +68,7 @@
         android:layout_below="@+id/main_screen_title_bar_layout"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="0dp">
 
@@ -80,13 +80,11 @@
 
             <ImageView
                 android:id="@+id/text_highlight"
-                android:layout_width="50dp"
+                android:layout_width="0dp"
                 android:layout_height="20dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="false"
+                android:layout_below="@id/text_total_amount"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="83dp"
-                android:layout_marginBottom="0dp"
+                android:layout_marginTop="-20dp"
                 android:background="@drawable/text_highlight" />
 
             <TextView
