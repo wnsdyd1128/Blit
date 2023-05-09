@@ -63,8 +63,8 @@
 
     <RelativeLayout
         android:id="@+id/main_screen_main_view_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/main_screen_title_bar_layout"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
@@ -73,34 +73,93 @@
         android:layout_marginBottom="0dp">
 
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/center_polygon">
+
+            <ImageView
+                android:id="@+id/text_highlight"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="83dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/text_highlight" />
+
+            <TextView
+                android:id="@+id/text_from_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/jamsil_medium"
+                android:text="@string/from_now"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/text_total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_from_now"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/jamsil_medium"
+                android:text="@string/total_amount"
+                android:textColor="#FFFFFF"
+                android:textSize="58sp" />
+
+
+        </RelativeLayout>
+
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/center_polygon"
+            android:layout_width="232dp"
+            android:layout_height="226dp"
+            android:layout_above="@+id/recycler_view_layout"
+            android:layout_alignParentEnd="false"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="122dp"
+            android:layout_marginBottom="21dp"
+            android:background="#000000"
             app:srcCompat="@mipmap/shape_foreground" />
 
         <RelativeLayout
             android:id="@+id/recycler_view_layout"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="135dp"
             android:layout_above="@+id/calculate_button"
             android:layout_marginBottom="30dp">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/recycler_view_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/entry_recycler_view"
+                android:layout_above="@+id/recycler_view"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/jamsil_medium"
+                android:gravity="center_vertical|start"
+                android:paddingStart="10sp"
+                android:text="@string/recycler_view_text"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/entry_recycler_view"
+                android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="75dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginBottom="0dp">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
 
             </androidx.recyclerview.widget.RecyclerView>
 
@@ -112,10 +171,11 @@
             android:layout_height="53dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="50dp"
+            android:background="@drawable/calculate_button"
+            android:fontFamily="@font/jamsil_medium"
             android:text="@string/calculate_button"
             android:textAppearance="@style/calculate_button"
-            android:fontFamily="@font/jamsil_medium"
-            android:background="@drawable/calculate_button" />
+            android:textSize="24sp" />
 
     </RelativeLayout>
 
