@@ -8,6 +8,9 @@
     <string name="calculate_button">정산하기!</string>
     <string name="recycler_view_text">함께한 멤버</string>
     <string name="from_now">지금까지</string>
-    <string name="total_amount">52,500 원</string>>
+    <string name="cash_unit"> 원</string>
+    <string name="payment">결제하기</string>
+    <string name="complete_calculating">정산 완료!</string>
+    <string name="total_amount">총금액</string>
 
 </resources>

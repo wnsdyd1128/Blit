@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_screen"
+    android:background="@drawable/main_screen_background"
 
     tools:context=".MainScreen">
 
@@ -48,7 +48,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="0dp"
-            android:background="@drawable/user_profile_image_ellipse"
+            android:background="@drawable/user_profile_image_outer_ellipse_pink"
             android:padding="2dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -82,7 +82,7 @@
                 android:id="@+id/text_highlight"
                 android:layout_width="0dp"
                 android:layout_height="20dp"
-                android:layout_below="@id/text_total_amount"
+                android:layout_below="@id/text_label_total_amount"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="-20dp"
                 android:background="@drawable/text_highlight" />
@@ -101,14 +101,14 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/text_total_amount"
+                android:id="@+id/text_label_total_amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_from_now"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/jamsil_medium"
-                android:text="@string/total_amount"
+                android:text="@string/cash_unit"
                 android:textColor="#FFFFFF"
                 android:textSize="58sp" />
 

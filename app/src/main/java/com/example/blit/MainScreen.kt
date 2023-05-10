@@ -1,6 +1,7 @@
 package com.example.blit
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -29,27 +30,30 @@ class MainScreen : AppCompatActivity() {
         supportActionBar?.hide()
         binding = ActivityMainScreenBinding.inflate(layoutInflater)
 
-        binding.textTotalAmount.addTextChangedListener(
+        binding.textLabelTotalAmount.addTextChangedListener(
             object: TextWatcher {
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
                 override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
                 override fun afterTextChanged(p0: Editable?) {
-                    binding.textHighlight.layoutParams.width = binding.textTotalAmount.paint.measureText(binding.textTotalAmount.text.toString()).toInt()
+                    binding.textHighlight.layoutParams.width = binding.textLabelTotalAmount.paint.measureText(binding.textLabelTotalAmount.text.toString()).toInt()
                 }
 
             }
         )
-
+        binding.calculateButton.setOnClickListener {
+            val intent = Intent(this, SplitTheBill::class.java)
+            startActivity(intent)
+        }
         setContentView(binding.root)
 
         initList()
         initRecyclerView()
-        test()
+        setTextTotalAmount()
     }
 
-    private fun test() {
+    private fun setTextTotalAmount() {
 //        binding.textTotalAmount.text = px2dp(getStatusBarHeight(this), this).toString()
-        binding.textTotalAmount.text = "123,456" + " 원"
+        binding.textLabelTotalAmount.text = "123,456" + " 원"
     }
 
     fun getStatusBarHeight(context: Context): Int {

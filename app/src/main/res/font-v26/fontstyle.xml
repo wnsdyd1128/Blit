@@ -15,6 +15,19 @@
     <font
         android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/jamsil_medium"/>
+        android:font="@font/jamsil_regular"/>
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/pretendard_medium" />
 
+    <font
+        android:font="@font/pretendard_bold"
+        android:fontWeight="400"
+        android:fontStyle="normal"/>
+
+    <font
+        android:font="@font/pretendard_semibold"
+        android:fontWeight="400"
+        android:fontStyle="normal"/>
 </font-family>
