@@ -4,67 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_centerHorizontal="true"
-    android:background="@drawable/split_the_bill_background"
+    android:background="@drawable/main_screen_background"
     tools:context=".SplitTheBill">
 
-    <include
-        android:id="@+id/user_profile_large_image"
-        layout="@layout/user_profile_large_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/main_screen_title_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="false"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="0dp">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/payment_button"
-        android:layout_width="177dp"
-        android:layout_height="59dp"
+
+        <TextView
+            android:id="@+id/blit"
+            android:layout_width="38dp"
+            android:layout_height="27dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="7.5dp"
+            android:layout_marginBottom="0dp"
+            android:fontFamily="@font/jamsil_medium"
+            android:gravity="center_horizontal|center_vertical"
+            android:lineSpacingExtra="3sp"
+            android:text="@string/app_name"
+            android:textAppearance="@style/blit_white"
+            android:translationY="0sp" />
+
+        <FrameLayout
+            android:id="@+id/user_profile_frame_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/user_profile_image_outer_ellipse_pink"
+            android:padding="2dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user_profile_image_ellipse"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_margin="0dp"
+                android:src="@mipmap/profile_image_foreground" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_screen_main_view_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_screen_title_bar_layout"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/payment_button"
-        android:fontFamily="@font/jamsil_medium"
-        android:text="@string/payment"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/text_complete_calculating"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/user_profile_large_image"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:fontFamily="@font/pretendard_bold"
-        android:text="@string/complete_calculating"
-        android:textColor="#000000"
-        android:textSize="30sp" />
-
-    <TextView
-        android:id="@+id/text_label_total_amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_complete_calculating"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/jamsil_bold"
-        android:text="@string/total_amount"
-        android:textColor="#000000"
-        android:textSize="45sp" />
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="0dp">
 
-    <TextView
-        android:id="@+id/total_amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_label_total_amount"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/jamsil_bold"
-        android:text="@string/cash_unit"
-        android:textColor="#000000"
-        android:textSize="45sp" />
+        <RelativeLayout
+            android:id="@+id/stage_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="25dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/StageRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/purchase_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/next_button"
+            android:layout_below="@id/stage_list_layout"
+            android:layout_marginBottom="15dp">
+
+            <com.yuyakaido.android.cardstackview.CardStackView
+                android:id="@+id/purchase_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
 
 
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            app:srcCompat="@drawable/next_button"
+            android:background="@android:color/transparent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </RelativeLayout>
 </RelativeLayout>

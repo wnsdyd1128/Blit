@@ -18,12 +18,12 @@ import com.example.blit.databinding.ActivityMainScreenBinding
 
 class MainScreen : AppCompatActivity() {
     private lateinit var binding:ActivityMainScreenBinding
+    val mDatas= mutableListOf<ProfileData>()
     private val adapter: RecyclerViewAdapter by lazy {
         RecyclerViewAdapter().apply {
             this.dataList = mDatas
         }
     }
-    val mDatas= mutableListOf<ProfileData>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -57,7 +57,7 @@ class MainScreen : AppCompatActivity() {
     }
 
     fun getStatusBarHeight(context: Context): Int {
-        var statusBarHeight = 0
+        var statusBarHeight: Int
         val resourceId: Int = context.resources.getIdentifier("status_bar_height", "dimen", "android")
         if (resourceId > 0) {
             statusBarHeight = resources.getDimensionPixelSize(resourceId)

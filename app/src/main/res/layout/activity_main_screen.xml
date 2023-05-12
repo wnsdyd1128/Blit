@@ -119,7 +119,7 @@
             android:id="@+id/center_polygon"
             android:layout_width="232dp"
             android:layout_height="226dp"
-            android:layout_above="@+id/recycler_view_layout"
+            android:layout_above="@+id/stage_list_layout"
             android:layout_alignParentEnd="false"
             android:layout_centerInParent="true"
             android:layout_marginEnd="122dp"
@@ -128,7 +128,7 @@
             app:srcCompat="@mipmap/shape_foreground" />
 
         <RelativeLayout
-            android:id="@+id/recycler_view_layout"
+            android:id="@+id/stage_list_layout"
             android:layout_width="match_parent"
             android:layout_height="135dp"
             android:layout_above="@+id/calculate_button"

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/purchase_item_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/purchase_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_marginTop="0dp"
+        android:background="@android:color/transparent" />
+
+    <RelativeLayout
+        android:id="@+id/purchase_text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/purchase_item_image"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-100dp"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/first_line_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/jamsil_medium"
+            android:maxEms="8"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/second_line_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/first_line_text"
+            android:fontFamily="@font/jamsil_medium"
+            android:textColor="@android:color/white"
+            android:textSize="45sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
